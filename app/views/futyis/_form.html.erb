@@ -1,0 +1,25 @@
+<%= form_for(@futyi) do |f| %>
+  <% if @futyi.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@futyi.errors.count, "error") %> prohibited this futyi from being saved:</h2>
+
+      <ul>
+      <% @futyi.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :cim %><br />
+    <%= f.text_field :cim %>
+  </div>
+  <div class="field">
+    <%= f.label :szam %><br />
+    <%= f.text_field :szam %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

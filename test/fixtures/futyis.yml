@@ -1,0 +1,9 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  cim: MyString
+  szam: 1
+
+two:
+  cim: MyString
+  szam: 1

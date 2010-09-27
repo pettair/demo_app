@@ -1,0 +1,25 @@
+<h1>Listing norbi_melegs</h1>
+
+<table>
+  <tr>
+    <th>Meleg</th>
+    <th>Mennyire</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @norbi_melegs.each do |norbi_meleg| %>
+  <tr>
+    <td><%= norbi_meleg.meleg %></td>
+    <td><%= norbi_meleg.mennyire %></td>
+    <td><%= link_to 'Show', norbi_meleg %></td>
+    <td><%= link_to 'Edit', edit_norbi_meleg_path(norbi_meleg) %></td>
+    <td><%= link_to 'Destroy', norbi_meleg, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Norbi meleg', new_norbi_meleg_path %>

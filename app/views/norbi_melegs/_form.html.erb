@@ -1,0 +1,25 @@
+<%= form_for(@norbi_meleg) do |f| %>
+  <% if @norbi_meleg.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@norbi_meleg.errors.count, "error") %> prohibited this norbi_meleg from being saved:</h2>
+
+      <ul>
+      <% @norbi_meleg.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :meleg %><br />
+    <%= f.text_field :meleg %>
+  </div>
+  <div class="field">
+    <%= f.label :mennyire %><br />
+    <%= f.text_field :mennyire %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
